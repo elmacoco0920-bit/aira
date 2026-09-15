@@ -1,0 +1,2741 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Aira Tseng | Actress · Performer · Creator">
+
+    <title>Aira Tseng | Actress · Performer · Creator</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           01. COLOR SYSTEM
+        ====================================================== */
+
+        :root {
+
+            --ivory: #F7F1EC;
+
+            --cream: #FFF9F5;
+
+            --oat: #E9DED6;
+
+            --oat-dark: #D8C7BD;
+
+            --lotus: #C9A3A0;
+
+            --lotus-light: #E6CCCA;
+
+            --soft-pink: #EAD8D5;
+
+            --brown: #514541;
+
+            --brown-light: #806F68;
+
+            --white: #FFFFFF;
+
+            --line: rgba(81,69,65,0.18);
+
+
+            /* 英文大標 */
+            --english-serif:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+
+            /* 中文 */
+            --chinese-serif:
+                "Noto Serif TC",
+                "PingFang TC",
+                "Microsoft JhengHei",
+                serif;
+
+
+            /* 一般文字 */
+            --sans:
+                "Noto Sans TC",
+                "PingFang TC",
+                "Microsoft JhengHei",
+                Arial,
+                sans-serif;
+        }
+
+
+        /* =====================================================
+           02. RESET
+        ====================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 95px;
+        }
+
+
+        body {
+
+            background: var(--ivory);
+
+            color: var(--brown);
+
+            font-family: var(--sans);
+
+            font-weight: 300;
+
+            line-height: 1.8;
+
+            overflow-x: hidden;
+        }
+
+img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+        }
+
+
+        button {
+
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           03. LANGUAGE SYSTEM
+        ====================================================== */
+
+        .lang-en {
+
+            display: none;
+        }
+
+
+        body.english .lang-zh {
+
+            display: none;
+        }
+
+
+        body.english .lang-en {
+
+            display: inline;
+        }
+
+
+        /* =====================================================
+           04. NAVIGATION
+        ====================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 22px 5%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(247,241,236,0.92);
+
+            backdrop-filter: blur(14px);
+
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom:
+                1px solid var(--line);
+        }
+
+
+        .logo {
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            letter-spacing: 0.08em;
+        }
+
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 32px;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+            font-size: 10px;
+
+            letter-spacing: 0.18em;
+
+            text-transform: uppercase;
+        }
+
+
+        .nav-links a {
+
+            position: relative;
+
+            transition: 0.3s ease;
+        }
+
+
+        .nav-links a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -7px;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--brown);
+
+            transition: 0.3s ease;
+        }
+
+
+        .nav-links a:hover::after {
+
+            width: 100%;
+        }
+
+
+        .language {
+
+            width: 35px;
+
+            height: 30px;
+
+            border:
+                1px solid var(--line);
+
+            background: transparent;
+
+            color: var(--brown);
+
+            cursor: pointer;
+
+            font-size: 9px;
+
+            letter-spacing: 0.08em;
+
+            transition: 0.3s ease;
+        }
+
+
+        .language:hover {
+
+            background: var(--lotus-light);
+        }
+
+
+        /* =====================================================
+           05. GENERAL SECTION
+        ====================================================== */
+
+        section {
+
+            padding: 130px 7%;
+        }
+
+
+        .section-label {
+
+            font-size: 9px;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+
+            color: var(--brown-light);
+
+            opacity: 0.85;
+
+            margin-bottom: 25px;
+        }
+
+
+        .section-title {
+
+            font-family:
+                var(--english-serif);
+
+            font-weight: 300;
+
+            font-size:
+                clamp(48px, 6vw, 82px);
+
+            line-height: 0.98;
+
+            letter-spacing: 0.015em;
+
+            margin-bottom: 55px;
+        }
+
+
+        .section-title em {
+
+            font-style: italic;
+        }
+
+
+        /* =====================================================
+           06. HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding:
+                125px 5% 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 7%;
+
+            background: var(--ivory);
+        }
+
+
+        .hero-image {
+
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--lotus),
+                    var(--lotus-light)
+                );
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        /*
+        ============================================
+        首頁照片
+
+        將下面的 div：
+
+        <div class="hero-placeholder"></div>
+
+        改成：
+
+        <img
+            src="images/a ira-main.jpg"
+            alt="Aira Tseng">
+
+        ============================================
+        */
+
+        .hero-placeholder {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: var(--brown);
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 18px;
+
+            letter-spacing: 0.2em;
+
+            opacity: 0.45;
+        }
+
+
+        .hero-text {
+
+            padding-right: 5%;
+        }
+
+
+        .hero-small {
+
+            font-size: 9px;
+
+            letter-spacing: 0.3em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+            color: var(--brown-light);
+
+            opacity: 0.85;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                var(--english-serif);
+
+            font-size:
+                clamp(65px, 8vw, 110px);
+
+            font-weight: 300;
+
+            line-height: 0.88;
+
+            letter-spacing: 0.015em;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero-subtitle {
+
+            font-family:
+                var(--chinese-serif);
+
+            font-size: 17px;
+
+            letter-spacing: 0.2em;
+
+            margin-bottom: 45px;
+
+            color: var(--brown-light);
+        }
+
+
+        .hero-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding:
+                14px 24px;
+
+            background: var(--brown);
+
+            color: var(--cream);
+
+            font-size: 9px;
+
+            letter-spacing: 0.2em;
+
+            transition: 0.35s ease;
+        }
+
+
+        .hero-button:hover {
+
+            background: var(--lotus);
+
+            color: var(--brown);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           07. ABOUT PREVIEW
+        ====================================================== */
+
+        .about-preview {
+
+            background: var(--cream);
+
+            display: grid;
+
+            grid-template-columns:
+                0.75fr 1.25fr;
+
+            gap: 8%;
+
+            align-items: start;
+        }
+
+
+        .about-text {
+
+            max-width: 700px;
+
+            font-family:
+                var(--chinese-serif);
+
+            font-size: 15px;
+
+            line-height: 2.15;
+
+            color: var(--brown-light);
+        }
+
+
+        .about-text p {
+
+            margin-bottom: 25px;
+        }
+
+
+        .text-link {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            font-size: 9px;
+
+            letter-spacing: 0.2em;
+
+            border-bottom:
+                1px solid var(--brown);
+
+            padding-bottom: 5px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .text-link:hover {
+
+            color: var(--lotus);
+
+            border-color: var(--lotus);
+        }
+
+
+        /* =====================================================
+           08. SHOWREEL
+        ====================================================== */
+
+        .showreel {
+
+            background: var(--lotus-light);
+        }
+
+
+        .video-container {
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            background: var(--brown);
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .video-placeholder {
+
+            text-align: center;
+
+            color: var(--cream);
+        }
+
+
+        .video-placeholder span {
+
+            display: block;
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .video-placeholder p {
+
+            font-size: 9px;
+
+            letter-spacing: 0.25em;
+
+            opacity: 0.7;
+        }
+
+
+        /* =====================================================
+           09. WORKS
+        ====================================================== */
+
+        .works {
+
+            background: var(--ivory);
+        }
+
+
+        .works-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 80px 50px;
+        }
+        .works-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+}
+
+
+.drive-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--brown);
+
+    color: var(--brown);
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+
+    transition: 0.35s ease;
+
+    white-space: nowrap;
+}
+
+
+.drive-button:hover {
+
+    background: var(--brown);
+
+    color: var(--cream);
+
+    transform: translateY(-3px);
+}
+
+
+.drive-button span {
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.drive-button:hover span {
+
+    transform: translateX(4px);
+}
+
+
+        .work {
+
+            cursor: default;
+        }
+
+
+        .work-image {
+
+            aspect-ratio: 4 / 3;
+
+            background: var(--oat);
+
+            overflow: hidden;
+
+            position: relative;
+
+            margin-bottom: 22px;
+        }
+        .work-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+
+        .work-placeholder {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 15px;
+
+            letter-spacing: 0.15em;
+
+            color: var(--brown);
+
+            opacity: 0.35;
+        }
+
+
+        .work-number {
+
+            font-size: 8px;
+
+            letter-spacing: 0.25em;
+
+            color: var(--brown-light);
+
+            opacity: 0.7;
+
+            margin-bottom: 5px;
+        }
+
+
+        .work-title {
+
+            font-family:
+                var(--chinese-serif);
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            letter-spacing: 0.06em;
+
+            margin: 0 0 5px 0;
+        }
+
+
+        .work-type {
+
+            font-size: 9px;
+
+            letter-spacing: 0.15em;
+
+            color: var(--brown-light);
+
+            opacity: 0.75;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           10. PROFILE
+        ====================================================== */
+
+        .profile {
+
+            background: var(--oat);
+        }
+
+
+        .profile-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+        }
+
+
+        .profile-info {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 35px;
+        }
+
+
+        .profile-item {
+
+            border-top:
+                1px solid var(--line);
+
+            padding-top: 12px;
+        }
+
+
+       .profile-item > span {
+
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: var(--brown-light);
+
+    margin-bottom: 8px;
+}
+
+
+        .profile-item strong {
+
+            font-weight: 400;
+            
+            font-family:
+                var(--english-serif);
+
+            font-size:  22px;
+        }
+        .profile-item strong span {
+
+    font-size: inherit;
+
+    letter-spacing: normal;
+
+    color: inherit;
+
+    opacity: 1;
+
+    text-transform: none;
+
+}
+
+
+        /* =====================================================
+           11. SKILLS
+        ====================================================== */
+
+        .skills {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+
+        .skill {
+
+            border-top:
+                1px solid var(--line);
+
+            padding-top: 12px;
+
+            cursor: default;
+
+            user-select: none;
+        }
+
+
+        .skill strong {
+
+            display: block;
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 22px;
+
+            font-weight: 400;
+
+            margin-bottom: 5px;
+        }
+
+
+       .skill > span {
+
+    font-size: 8px;
+
+    letter-spacing: 0.1em;
+
+    color: var(--brown-light);
+
+    opacity: 0.8;
+}
+
+
+        /* =====================================================
+           12. FULL ABOUT
+        ====================================================== */
+
+        .about-full {
+
+            background: var(--cream);
+        }
+
+
+        .about-content {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .about-content p {
+
+            font-family:
+                var(--chinese-serif);
+
+            font-size: 16px;
+
+            line-height: 2.15;
+
+            margin-bottom: 28px;
+
+            color: var(--brown-light);
+        }
+
+
+        .philosophy {
+
+            margin-top: 70px;
+
+            padding: 50px;
+
+            background: var(--soft-pink);
+        }
+
+
+        .philosophy h3 {
+
+            font-family:
+                var(--english-serif);
+
+            font-size: 35px;
+
+            font-weight: 400;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =====================================================
+           13. CONTACT
+        ====================================================== */
+
+        .contact {
+
+            background: var(--brown);
+
+            color: var(--cream);
+
+            text-align: center;
+
+            padding: 150px 7%;
+        }
+
+
+        .contact .section-label {
+
+            color: var(--cream);
+
+            opacity: 0.6;
+        }
+
+
+        .contact h2 {
+
+            font-family:
+                var(--english-serif);
+
+            font-size:
+                clamp(55px, 7vw, 90px);
+
+            font-weight: 300;
+
+            line-height: 0.95;
+
+            letter-spacing: 0.01em;
+
+            margin-bottom: 40px;
+        }
+
+
+        .contact p {
+
+            color: var(--cream);
+
+            margin-bottom: 30px;
+        }
+
+
+        .email {
+
+            font-size: 13px;
+
+            letter-spacing: 0.08em;
+
+            border-bottom:
+                1px solid
+                rgba(255,249,245,0.5);
+
+            padding-bottom: 8px;
+
+            transition: 0.3s;
+        }
+
+
+        .email:hover {
+
+            color: var(--lotus-light);
+
+            border-color:
+                var(--lotus-light);
+        }
+
+
+        /* =====================================================
+           14. FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: var(--brown);
+
+            color: var(--cream);
+
+            padding:
+                25px 7% 35px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 8px;
+
+            letter-spacing: 0.15em;
+
+            opacity: 0.9;
+        }
+
+
+        /* =====================================================
+           15. ANIMATION
+        ====================================================== */
+
+        .fade-in {
+
+            opacity: 0;
+
+            transform:
+                translateY(30px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .fade-in.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           16. MOBILE
+        ====================================================== */
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                padding:
+                    18px 6%;
+            }
+
+
+            .nav-right {
+
+                gap: 15px;
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+
+                font-size: 8px;
+            }
+
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                padding-top: 110px;
+
+                gap: 45px;
+            }
+
+
+            .hero-image {
+
+                order: 1;
+            }
+
+
+            .hero-text {
+
+                order: 2;
+
+                padding-right: 0;
+            }
+
+
+            .hero h1 {
+
+                font-size: 65px;
+            }
+
+
+            section {
+
+                padding:
+                    90px 7%;
+            }
+
+
+            .section-title {
+
+                font-size: 55px;
+            }
+
+
+            .about-preview {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .works-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+
+
+            .profile-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+
+
+            .profile-info {
+
+                gap: 25px;
+            }
+
+
+            .skills {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .philosophy {
+
+                padding: 30px;
+            }
+
+
+            .contact h2 {
+
+                font-size: 58px;
+            }
+
+
+            footer {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+
+
+        /* =====================================================
+           17. SMALL PHONE
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .nav-links {
+
+                display: none;
+            }
+
+
+            .hero h1 {
+
+                font-size: 55px;
+            }
+
+
+            .section-title {
+
+                font-size: 48px;
+            }
+
+
+            .profile-info {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .skills {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact h2 {
+
+                font-size: 50px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav id="navbar">
+
+    <a
+        href="#home"
+        class="logo">
+
+        AIRA TSENG
+
+    </a>
+
+
+    <div class="nav-right">
+
+        <div class="nav-links">
+
+            <a href="#about">
+
+                <span class="lang-zh">
+                    關於我
+                </span>
+
+                <span class="lang-en">
+                    ABOUT
+                </span>
+
+            </a>
+
+
+            <a href="#showreel">
+
+                <span class="lang-zh">
+                    作品集
+                </span>
+
+                <span class="lang-en">
+                    SHOWREEL
+                </span>
+
+            </a>
+
+
+            <a href="#works">
+
+                <span class="lang-zh">
+                    作品
+                </span>
+
+                <span class="lang-en">
+                    WORKS
+                </span>
+
+            </a>
+
+
+            <a href="#profile">
+
+                <span class="lang-zh">
+                    個人資料
+                </span>
+
+                <span class="lang-en">
+                    PROFILE
+                </span>
+
+            </a>
+
+
+            <a href="#contact">
+
+                <span class="lang-zh">
+                    聯絡
+                </span>
+
+                <span class="lang-en">
+                    CONTACT
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <button
+            class="language"
+            id="languageButton"
+            type="button">
+
+            EN
+
+        </button>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     MAIN
+====================================================== -->
+
+<main id="home">
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero">
+
+<div class="hero-image">
+
+    <img
+        src="images/hero.jpg"
+        alt="Aira Tseng">
+
+</div>
+
+
+        <div class="hero-text fade-in">
+
+
+            <div class="hero-small">
+
+                <span class="lang-zh">
+                    演員 · 表演者 · 創作者
+                </span>
+
+                <span class="lang-en">
+                    ACTRESS · PERFORMER · CREATOR
+                </span>
+
+            </div>
+
+
+            <h1>
+
+                Aira<br>
+                Tseng
+
+            </h1>
+
+
+            <div class="hero-subtitle">
+
+                曾歆晴
+
+            </div>
+
+
+            <a
+                href="#showreel"
+                class="hero-button">
+
+                <span class="lang-zh">
+                    查看 Showreel
+                </span>
+
+                <span class="lang-en">
+                    WATCH SHOWREEL
+                </span>
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABOUT PREVIEW
+    ================================================== -->
+
+    <section
+        class="about-preview"
+        id="about">
+
+
+        <div>
+
+            <div class="section-label">
+
+                <span class="lang-zh">
+                    01 / 關於我
+                </span>
+
+                <span class="lang-en">
+                    01 / ABOUT
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                <span class="lang-zh">
+                    關於<br>
+                    Aira
+                </span>
+
+                <span class="lang-en">
+                    About<br>
+                    Aira
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="about-text fade-in">
+
+
+            <div class="lang-zh">
+
+                <p>
+                    我是曾歆晴，一名夢想成為演員的表演者。
+                </p>
+
+                <p>
+                    我喜歡演戲，是因為希望能在短暫的人生裡，
+                    體驗不同的人生活法。
+                </p>
+                <p>
+                    透過與角色的共振，
+                    我試著理解並傳達角色的情感。
+                </p>
+
+                <p>
+                    我喜歡有故事感的角色，也享受在閱讀劇本時
+                    逐漸與角色產生連結。
+                </p>
+
+                <p>
+                    希望我的表演能讓觀眾感受到療癒，
+                    或得到一些啟發。
+                </p>
+
+            </div>
+
+
+            <div class="lang-en">
+
+                <p>
+                    I am Aira Tseng, a young performer
+                    who dreams of becoming an actress.
+                </p>
+
+                <p>
+                    I love acting because it allows me to
+                    experience different ways of living
+                    within one lifetime. By connecting
+                    with a character, I try to understand
+                    and communicate their emotions.
+                </p>
+
+                <p>
+                    I am drawn to characters with a strong
+                    sense of story, and I enjoy gradually
+                    building a connection with a character
+                    while reading a script.
+                </p>
+
+                <p>
+                    I hope my performances can bring
+                    audiences a sense of healing,
+                    inspiration, or simply a moment
+                    worth remembering.
+                </p>
+
+            </div>
+
+
+            <a
+                href="#about-full"
+                class="text-link">
+
+                <span class="lang-zh">
+                    閱讀更多 →
+                </span>
+
+                <span class="lang-en">
+                    READ MORE →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SHOWREEL
+    ================================================== -->
+
+    <section
+        class="showreel"
+        id="showreel">
+
+
+        <div class="section-label">
+
+            <span class="lang-zh">
+                02 / Showreel
+            </span>
+
+            <span class="lang-en">
+                02 / SHOWREEL
+            </span>
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Showreel
+
+        </h2>
+
+
+        <div class="video-container">
+
+            <!--
+            ==============================================
+            未來放入影片時：
+
+            <video
+                controls
+                poster="images/showreel-cover.jpg">
+
+                <source
+                    src="videos/a ira-showreel.mp4"
+                    type="video/mp4">
+
+            </video>
+
+            ==============================================
+            -->
+
+
+            <div class="video-placeholder">
+
+                <span>
+                    ▶
+                </span>
+
+                <p>
+                    AIRA TSENG · SHOWREEL
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         WORKS
+    ================================================== -->
+
+    <section
+        class="works"
+        id="works">
+
+
+        <div class="section-label">
+
+            <span class="lang-zh">
+                03 / 精選作品
+            </span>
+
+            <span class="lang-en">
+                03 / SELECTED WORKS
+            </span>
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            <span class="lang-zh">
+                精選<br>
+                作品
+            </span>
+
+            <span class="lang-en">
+                Selected<br>
+                <em>Works</em>
+            </span>
+
+        </h2>
+        
+    <a
+        href="https://drive.google.com/drive/folders/1clIkVFsG1lZbngKLURyBcc0VFT5H1B66?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="drive-button">
+
+        <span class="lang-zh">
+            查看全部作品
+        </span>
+
+        <span class="lang-en">
+            VIEW ALL WORKS
+        </span>
+
+        <span>
+            →
+        </span>
+
+    </a>
+
+</div>
+
+
+        <div class="works-grid">
+
+
+            <!-- WORK 01 -->
+
+            <article
+                class="work fade-in">
+
+
+               <div class="work-image">
+
+    <img
+        src="images/work1.jpg"
+        alt="《迴映》">
+
+</div>
+
+                <div class="work-number">
+
+                    01 / 03
+
+                </div>
+
+
+                <h3 class="work-title">
+
+                    《迴映》
+
+                </h3>
+
+
+                <div class="work-type">
+
+                    Stage Play · 2025
+
+                </div>
+
+            </article>
+
+
+
+            <!-- WORK 02 -->
+
+            <article
+                class="work fade-in">
+
+
+               <div class="work-image">
+
+    <img
+        src="images/work2.jpg"
+        alt="《風吹過的記憶》">
+
+</div>
+
+                <div class="work-number">
+
+                    02 / 03
+
+                </div>
+
+
+                <h3 class="work-title">
+                        <a href="https://www.youtube.com/watch?v=qkzKnTU5A84" target="_blank">
+
+                    《風吹過的記憶》
+                            </a>
+                </h3>
+
+
+                <div class="work-type">
+
+                    Short Film · 2025
+
+                </div>
+
+            </article>
+
+
+
+            <!-- WORK 03 -->
+
+            <article
+                class="work fade-in">
+
+
+                <div class="work-number">
+
+                    03 / 03
+
+                </div>
+
+
+                <h3 class="work-title">
+                            <a href="https://www.youtube.com/watch?v=nhxou2wKA70" target="_blank">
+
+                    《亦念之間》
+                                </a>
+
+                </h3>
+
+
+                <div class="work-type">
+
+                    Short Film · 2025
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROFILE
+    ================================================== -->
+
+    <section
+        class="profile"
+        id="profile">
+
+
+        <div class="section-label">
+
+            <span class="lang-zh">
+                04 / 個人資料
+            </span>
+
+            <span class="lang-en">
+                04 / PROFILE
+            </span>
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Profile
+
+        </h2>
+
+
+        <div class="profile-grid">
+
+
+            <!-- BASIC INFORMATION -->
+
+            <div class="profile-info">
+
+
+    <!-- Name -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                姓名
+            </span>    
+
+            <span class="lang-en">
+                Name
+            </span>
+        </span>
+
+        <strong>
+            曾歆晴 / Aira Tseng
+        </strong>
+
+    </div>
+
+
+    <!-- Playing Age -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                可飾演年齡
+            </span>
+
+            <span class="lang-en">
+                Playing Age
+            </span>
+        </span>
+
+        <strong>
+            18–22
+        </strong>
+
+    </div>
+
+
+    <!-- Height -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                身高
+            </span>
+            <span class="lang-en">
+                Height
+            </span>
+        </span>
+
+        <strong>
+            160 cm
+        </strong>
+
+    </div>
+
+
+    <!-- Hair -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                髮色
+            </span>
+            <span class="lang-en">
+                Hair
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                黑色
+            </span>
+            <span class="lang-en">
+                Black
+            </span>
+
+        </strong>
+
+    </div>
+
+
+    <!-- Eyes -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                眼睛
+            </span>
+            <span class="lang-en">
+                Eyes
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                黑色
+            </span>
+            <span class="lang-en">
+                Black
+            </span>
+
+        </strong>
+
+    </div>
+
+
+    <!-- Location -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                所在地
+            </span>
+            <span class="lang-en">
+                Location
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                台灣
+            </span>
+            <span class="lang-en">
+                Taiwan
+            </span>
+
+        </strong>
+
+    </div>
+
+
+    <!-- Education -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                學校
+            </span>
+            <span class="lang-en">
+                Education
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                國立政治大學
+            </span>
+
+            <span class="lang-en">
+                National Chengchi University
+            </span>
+
+        </strong>
+
+    </div>
+
+
+    <!-- Major -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                主修
+            </span>
+            <span class="lang-en">
+                Major
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                傳播學院
+            </span>
+
+            <span class="lang-en">
+                College of Communication
+            </span>
+
+        </strong>
+
+    </div>
+
+
+    <!-- Languages -->
+
+    <div class="profile-item">
+
+        <span>
+            <span class="lang-zh">
+                語言
+            </span>
+            <span class="lang-en">
+                Languages
+            </span>
+        </span>
+
+        <strong>
+
+            <span class="lang-zh">
+                中文 · 英文 · 韓文
+            </span>
+
+            <span class="lang-en">
+                Mandarin · English · Korean
+            </span>
+
+        </strong>
+
+    </div>
+
+
+</div>
+
+            <!-- SKILLS -->
+
+            <div>
+
+                <div class="section-label">
+
+                    <span class="lang-zh">
+                        表演技能
+                    </span>
+
+                    <span class="lang-en">
+                        SKILLS
+                    </span>
+
+                </div>
+
+
+                <div class="skills">
+
+    <!-- Acting -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">演戲</span>
+            <span class="lang-en">Acting</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">電影 · 舞台 · 微電影</span>
+            <span class="lang-en">FILM · STAGE · MICRO FILM</span>
+        </span>
+
+    </div>
+
+
+    <!-- Writing -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">編劇</span>
+            <span class="lang-en">Writing</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">劇本創作 · 舞台劇</span>
+            <span class="lang-en">SCREENWRITING · STAGE PLAY</span>
+        </span>
+
+    </div>
+
+
+    <!-- Directing -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">導演</span>
+            <span class="lang-en">Directing</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">微電影</span>
+            <span class="lang-en">MICRO FILM</span>
+        </span>
+
+    </div>
+
+
+    <!-- Editing -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">剪輯</span>
+            <span class="lang-en">Editing</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">影片剪輯</span>
+            <span class="lang-en">VIDEO EDITING</span>
+        </span>
+
+    </div>
+
+
+    <!-- Hosting -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">主持</span>
+            <span class="lang-en">Hosting</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">活動 · 簡報</span>
+            <span class="lang-en">EVENT · PRESENTATION</span>
+        </span>
+
+    </div>
+
+
+    <!-- Dance -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">舞蹈</span>
+            <span class="lang-en">Dance</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">K-POP · 興趣</span>
+            <span class="lang-en">K-POP · HOBBY</span>
+        </span>
+
+    </div>
+
+
+    <!-- Vocal -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">歌唱</span>
+            <span class="lang-en">Vocal</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">歌唱 · 興趣</span>
+            <span class="lang-en">SINGING · HOBBY</span>
+        </span>
+
+    </div>
+
+
+    <!-- Other -->
+    <div class="skill">
+
+        <strong>
+            <span class="lang-zh">其他</span>
+            <span class="lang-en">Other</span>
+        </strong>
+
+        <span>
+            <span class="lang-zh">烘焙</span>
+            <span class="lang-en">BAKING</span>
+        </span>
+
+    </div>
+
+</div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FULL ABOUT
+    ================================================== -->
+
+    <section
+        class="about-full"
+        id="about-full">
+
+
+        <div class="about-content">
+
+
+            <div class="section-label">
+
+                <span class="lang-zh">
+                    關於 Aira
+                </span>
+
+                <span class="lang-en">
+                    ABOUT AIRA
+                </span>
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                <span class="lang-zh">
+                    我的<br>
+                    表演理念
+                </span>
+
+                <span class="lang-en">
+                    Acting<br>
+                    <em>Philosophy</em>
+                </span>
+
+            </h2>
+
+
+            <div class="lang-zh">
+
+                <p>
+                    我是曾歆晴，一名夢想成為演員的表演者。
+                </p>
+
+                <p>
+                    我喜歡演戲，是因為希望能在短暫的人生裡，
+                    體驗不同的人生活法。
+                </p>
+
+                <p>
+                    透過與角色的共振，
+                    我試著理解並傳達角色的情感。
+                </p>
+
+                <p>
+                    我喜歡有故事感的角色，也享受在閱讀劇本時
+                    逐漸與角色產生連結。
+                </p>
+
+                <p>
+                    希望我的表演能讓觀眾感受到療癒，
+                    或得到一些啟發。
+                </p>
+
+            </div>
+
+
+            <div class="lang-en">
+
+                <p>
+                    I am Aira Tseng, a performer who hopes
+                    to become an actress and explore the
+                    many different lives that stories can offer.
+                </p>
+
+                <p>
+                    I love acting because every character
+                    gives me an opportunity to experience
+                    another perspective and another way of living.
+                </p>
+
+                <p>
+                    When reading a script, I enjoy discovering
+                    the small details that gradually build a
+                    connection between myself and the character.
+                </p>
+
+                <p>
+                    Through acting, I hope to create moments
+                    that bring audiences comfort, inspiration,
+                    or a new way of seeing the world.
+                </p>
+
+            </div>
+
+
+            <div class="philosophy">
+
+
+                <div class="section-label">
+
+                    <span class="lang-zh">
+                        我的話
+                    </span>
+
+                    <span class="lang-en">
+                        PERSONAL QUOTE
+                    </span>
+
+                </div>
+
+
+                <h3>
+
+                    <span class="lang-zh">
+                        這裡留給未來的我。
+                    </span>
+
+                    <span class="lang-en">
+                        A story still waiting to be written.
+                    </span>
+
+                </h3>
+
+
+                <p>
+
+                    <span class="lang-zh">
+                        未來會放上屬於 Aira 自己的座右銘。
+                    </span>
+
+                    <span class="lang-en">
+                        A personal motto will be added here.
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section
+        class="contact"
+        id="contact">
+
+
+        <div class="section-label">
+
+            <span class="lang-zh">
+                聯絡
+            </span>
+
+            <span class="lang-en">
+                CONTACT
+            </span>
+
+        </div>
+
+
+        <h2>
+
+            <span class="lang-zh">
+                歡迎與我聯絡
+            </span>
+
+            <span class="lang-en">
+                Let's Work<br>
+                <em>Together.</em>
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            <span class="lang-zh">
+                期待與你一起創作
+            </span>
+
+            <span class="lang-en">
+                Looking forward to creating with you.
+            </span>
+
+        </p>
+
+
+        <a
+            href="mailto:elmacoco0920@gmail.com"
+            class="email">
+
+            elmacoco0920@gmail.com
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div>
+        © 2026 Aira Tseng
+    </div>
+
+
+    <div>
+
+        <span class="lang-zh">
+            演員 · 表演者 · 創作者
+        </span>
+
+        <span class="lang-en">
+            Actress · Performer · Creator
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+    /* =====================================================
+       01. LANGUAGE SWITCH
+    ====================================================== */
+
+    const languageButton =
+        document.getElementById(
+            "languageButton"
+        );
+
+
+    let englishMode = false;
+
+
+    languageButton.addEventListener(
+        "click",
+        function () {
+
+            englishMode = !englishMode;
+
+
+            if (englishMode) {
+
+                document.body.classList.add(
+                    "english"
+                );
+
+                languageButton.textContent =
+                    "中";
+
+                document.documentElement
+                    .setAttribute(
+                        "lang",
+                        "en"
+                    );
+
+            } else {
+
+                document.body.classList.remove(
+                    "english"
+                );
+
+                languageButton.textContent =
+                    "EN";
+
+                document.documentElement
+                    .setAttribute(
+                        "lang",
+                        "zh-Hant"
+                    );
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       02. SCROLL ANIMATION
+    ====================================================== */
+
+    const fadeElements =
+        document.querySelectorAll(
+            ".fade-in"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+    fadeElements.forEach(
+        function (element) {
+
+            observer.observe(
+                element
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       03. NAVIGATION
+       
+       所有 href="#..." 都會直接對應到
+       網站中的 id。
+    ====================================================== */
+
+    document.querySelectorAll(
+        ".nav-links a"
+    ).forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    const targetId =
+                        link.getAttribute(
+                            "href"
+                        );
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (target) {
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       04. HERO SHOWREEL BUTTON
+       
+       首頁按鈕直接前往 Showreel
+    ====================================================== */
+
+    const showreelButton =
+        document.querySelector(
+            ".hero-button"
+        );
+
+
+    showreelButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const showreel =
+                document.getElementById(
+                    "showreel"
+                );
+
+
+            if (showreel) {
+
+                showreel.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        }
+    );
+
+
+</script>
+
+
+</body>
+
+</html>
