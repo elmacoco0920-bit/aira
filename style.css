@@ -12,11 +12,11 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}button,a{
 @media(max-width:400px){.cover h1{width:260px}.first-name{font-size:116px}.last-name{font-size:92px;margin-left:55px}.chinese-name{margin-top:17px}.cover-collage{margin-top:28px}.cover-role{margin-bottom:16px}}
 @media(prefers-reduced-motion:reduce){html:not(.motion-enabled){scroll-behavior:auto}html:not(.motion-enabled) *,html:not(.motion-enabled) *:before,html:not(.motion-enabled) *:after{animation:none!important;transition:none!important}html:not(.motion-enabled) .reveal{opacity:1;translate:0}}
 
-/* A single dream-garden backdrop follows both pages continuously. */
-body{background:#f6dfe8;isolation:isolate}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#fff3f51a,#fff3f51a),url("images/dream-garden.webp");background-size:cover;background-position:center;background-repeat:no-repeat}
-body::before{opacity:.04}
-.story-page .site-header{background:#fce7ecb3}
+/* A quiet blush canvas keeps the typography readable on both pages. */
+body{background:#fff4f7;isolation:isolate}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(ellipse at 0% 0%,#f4dce680,transparent 48%),radial-gradient(ellipse at 100% 100%,#ebe3f070,transparent 48%),linear-gradient(#fff5f8,#fceef3);background-size:cover;background-position:center;background-repeat:no-repeat}
+body::before{display:none}
+.story-page .site-header{background:#fff4f7f2}
 .header-actions .motion-toggle{border-radius:24px;min-width:102px;padding:5px 13px;font-size:12px;background:#fff4f9b8;white-space:nowrap}
 .header-actions .motion-toggle[aria-pressed="true"]{border-color:#a8577c;color:#863556}
 .header-actions .motion-toggle[aria-pressed="false"]{background:#ffffffb3;color:#6e5361}
@@ -25,5 +25,5 @@ body::before{opacity:.04}
 .cloud-archive .enter-link:hover{background:#fff8fb}
 .profile-text-only{display:block;max-width:820px;margin:0 auto 80px}
 .profile-text-only .profile-list{grid-template-columns:repeat(3,1fr)}
-.story{background:radial-gradient(ellipse at center,#ffeff529 0%,transparent 75%)}
-@media(max-width:700px){.header-note{display:none}.header-actions .motion-toggle{min-width:93px;padding:4px 10px;font-size:11px}.story-page .back-home{font-size:11px}.profile-text-only .profile-list{grid-template-columns:1fr 1fr}.cloud-archive{margin-bottom:65px}body::after{background-size:auto 100lvh;background-position:43% center}}
+.story{background:transparent}
+@media(max-width:700px){.header-note{display:none}.header-actions .motion-toggle{min-width:93px;padding:4px 10px;font-size:11px}.story-page .back-home{font-size:11px}.profile-text-only .profile-list{grid-template-columns:1fr 1fr}.cloud-archive{margin-bottom:65px}body::after{background-size:cover;background-position:center}}
