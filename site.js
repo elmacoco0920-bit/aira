@@ -52,3 +52,26 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   document.documentElement.classList.add('js-motion');
 }
+
+
+// Natural editorial pointer interactions.
+(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+  const collage = document.querySelector('.cover-collage');
+  const portrait = document.querySelector('.cover-portrait');
+  if (collage && portrait) {
+    collage.addEventListener('pointermove', (event) => {
+      const r = collage.getBoundingClientRect();
+      const x = (event.clientX - r.left) / r.width - .5;
+      const y = (event.clientY - r.top) / r.height - .5;
+      collage.style.transform = `rotateX(${(-y*2.4).toFixed(2)}deg) rotateY(${(x*3.2).toFixed(2)}deg)`;
+      portrait.style.transform = `rotate(-3deg) translate(${(x*10).toFixed(1)}px,${(y*8).toFixed(1)}px) rotateX(${(-y*5).toFixed(2)}deg) rotateY(${(x*6).toFixed(2)}deg)`;
+    });
+    collage.addEventListener('pointerleave', () => {
+      collage.style.transform = '';
+      portrait.style.transform = '';
+    });
+  }
+})();
